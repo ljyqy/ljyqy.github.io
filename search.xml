@@ -32,4 +32,19 @@
 <p>运气好，几次就运行成功了…….</p>
 ]]></content>
   </entry>
+  <entry>
+    <title></title>
+    <url>/2024/07/11/Flash%E9%92%93%E9%B1%BC/</url>
+    <content><![CDATA[<p><img src="https://cdn.nlark.com/yuque/0/2024/png/46296189/1720696557271-9eff6f29-9309-41be-b564-ac79f6ab8b02.png#averageHue=%23cae8c7&id=p8Fl6&originHeight=61&originWidth=142&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br>新建文本改为flash.js，将flash代码复制进去</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/46296189/1720696557448-f48546a2-0180-4f29-adfd-26b467af71a1.png#averageHue=%23e5f3c3&id=lBVQ2&originHeight=65&originWidth=164&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br>新建文本改为login.php，将做好的登录页面代码复制进去</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/46296189/1720696557620-24a36809-20b5-4109-86c1-23a4d42b8512.png#averageHue=%23242220&id=nsoEq&originHeight=79&originWidth=454&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<script src="flash.js"></script>
+
+<p>将以上代码插入到login.php中</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/46296189/1720696557769-37108091-c527-4fba-b04d-90fbc1be558b.png#averageHue=%23fbfafa&id=LNv1O&originHeight=89&originWidth=1034&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br>在href&#x3D;’ ’中输入钓鱼网站或软件即可，我填的是<a href="http://baidu.com/">http://baidu.com</a></p>
+<p>打开Phpstudy，启动Apache和MySQL，将flash.js和login.php拖入phpstudy目录下的WWW文件夹中</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/46296189/1720696558018-ec2a9817-c84e-4e98-bb7d-6aad203199e2.png#averageHue=%23fcfbfb&id=WrPJq&originHeight=420&originWidth=908&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br><img src="https://cdn.nlark.com/yuque/0/2024/png/46296189/1720696558211-829e2563-f10b-4abb-9fdf-c4fac7ba9516.png#averageHue=%23fcfbfa&id=SlJmp&originHeight=339&originWidth=856&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<p>浏览器中输入域名127.0.0.1&#x2F;login.php即可访问<br><img src="https://cdn.nlark.com/yuque/0/2024/png/46296189/1720696558549-76388be2-662d-4dee-8d44-ccce398e4a62.png#averageHue=%2331376b&id=iOQs3&originHeight=1539&originWidth=2560&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+]]></content>
+  </entry>
 </search>
